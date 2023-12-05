@@ -14,7 +14,7 @@ var (
 )
 
 type ServiceError struct {
-	appErr error // error returned by the application, external package or go lib
+	appErr error // error returned by the application, adapter, external package or go lib
 	svcErr error // generic error returned from the service e.g. http, grpc, database, etc
 }
 
