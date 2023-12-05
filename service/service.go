@@ -3,8 +3,8 @@ package service
 import "fmt"
 
 type serviceError struct {
-	appErr string // programmer-defined message
-	svcErr error  // service error e.g. http, grpc, database, etc
+	appErr string // description of the error
+	svcErr error  // generic errors retruned from the services e.g. http, grpc, database, etc
 }
 
 func (svc *serviceError) Error() string {
