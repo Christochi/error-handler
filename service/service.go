@@ -1,6 +1,17 @@
 package service
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
+
+// generic http errors
+var (
+	ErrNotImplemented      = errors.New("not implemented")
+	ErrNotFound            = errors.New("not found")
+	ErrInternalServerError = errors.New("internal server error")
+	ErrUnprocessableEntity = errors.New("syntax error in json")
+)
 
 type ServiceError struct {
 	appErr error // error returned by the application, external package or go lib
