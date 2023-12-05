@@ -7,7 +7,7 @@ import (
 
 type ServiceError struct {
 	appErr  error  // error returned by the application, adapter, external package or go lib
-	message string // error description
+	message string // error description, generic error or error status codes
 }
 
 func (svc *ServiceError) Error() string {
