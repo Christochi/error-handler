@@ -4,7 +4,7 @@ import "fmt"
 
 type serviceError struct {
 	appErr string // description of the error
-	svcErr error  // generic errors returned from the services e.g. http, grpc, database, etc
+	svcErr error  // generic error returned from the service e.g. http, grpc, database, etc
 }
 
 func (svc *serviceError) Error() string {
