@@ -1,3 +1,5 @@
+// Error Interface
+
 package service
 
 import (
