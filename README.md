@@ -17,4 +17,13 @@ func openFile() error {
 
 	return nil
 }
+
+~~~
+err := openFile()
+
+var svcErr *service.ServiceError
+if errors.As(err, &svcErr){
+   // your implementation
+}
+~~~
 ~~~
