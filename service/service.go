@@ -18,12 +18,12 @@ func (svc *ServiceError) Error() string {
 
 func NewError(appError error, message any) error {
 
-	switch desc := message.(type) {
+	switch msg := message.(type) {
 	case int:
-		return &ServiceError{appErr: appError, message: strconv.Itoa(desc)}
+		return &ServiceError{appErr: appError, message: strconv.Itoa(msg)}
 	case error:
-		return &ServiceError{appErr: appError, message: desc.Error()}
+		return &ServiceError{appErr: appError, message: msg.Error()}
 	default:
-		return &ServiceError{appErr: appError, message: desc.(string)}
+		return &ServiceError{appErr: appError, message: msg.(string)}
 	}
 }
