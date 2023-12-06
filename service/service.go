@@ -13,7 +13,7 @@ type ServiceError struct {
 }
 
 func (svc *ServiceError) Error() string {
-	return fmt.Sprintf("error: %v - %v", svc.appErr, svc.message)
+	return fmt.Sprintf("Error: %v, Desc: %v", svc.appErr, svc.message)
 }
 
 func NewError(appError error, message any) error {
