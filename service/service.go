@@ -16,6 +16,14 @@ func (svc *ServiceError) Error() string {
 	return fmt.Sprintf("Error: %v, Desc: %v", svc.appErr, svc.message)
 }
 
+func (svc *ServiceError) AppError() error {
+	return svc.appErr
+}
+
+func (svc *ServiceError) ErrDesc() string {
+	return svc.message
+}
+
 func NewError(appError error, message any) error {
 
 	switch msg := message.(type) {
