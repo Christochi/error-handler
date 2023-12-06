@@ -5,4 +5,4 @@ Generic error package that can be used to handle errors in your applications, se
 
 ## Setup
 - import the package using `go get` or `go mod tidy` commands
-  - using `go get`: on the temrinal of your project directory, paste: `go get github.com/Christochi/error-handler`
+  - using `go get`: on the terminal of your project directory, paste: `go get github.com/Christochi/error-handler`
