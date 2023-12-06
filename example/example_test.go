@@ -16,3 +16,12 @@ func TestOpenFile(t *testing.T) {
 		t.Errorf("want %v, got %v", nil, err)
 	}
 }
+
+func TestGoToURL(t *testing.T) {
+	err := goToUrl()
+
+	var svcErr *service.ServiceError
+	if errors.As(err, &svcErr) {
+		t.Errorf("want %v, got %v", nil, err)
+	}
+}
