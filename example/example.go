@@ -3,3 +3,17 @@
 */
 
 package example
+
+import (
+	"os"
+
+	"github.com/Christochi/error-handler/service"
+)
+
+func openFile() error {
+	if _, err := os.Open("no-file"); err != nil {
+		return service.NewError(err, os.ErrNotExist) // application error, file does not exist
+	}
+
+	return nil
+}
