@@ -17,7 +17,7 @@ func openFile() error {
 
 	return nil
 }
-
+~~~
 ~~~
 err := openFile()
 
