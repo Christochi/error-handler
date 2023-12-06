@@ -26,4 +26,3 @@ if errors.As(err, &svcErr){
    // your implementation
 }
 ~~~
-~~~
